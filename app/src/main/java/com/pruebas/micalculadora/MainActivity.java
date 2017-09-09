@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private ModeloCalculadora modeloCalculadora;
     private TextView resultadoTexto;
     private Integer resultadoCalculadora;
-
+    /* Esto es una prueba para saber si git está vinculado*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); // Para recuperar el estado de la app cuando ha estado inactiva
