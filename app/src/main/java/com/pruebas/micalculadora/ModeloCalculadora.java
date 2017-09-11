@@ -127,6 +127,13 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+  public Integer sumatoria() {
+      int f = 1;
+      for (int i = 0; i < z; i++)
+          f = f+i;
+      z=f;
+      return new Integer(z);
+  }
     /**
      * 
      * @PRE El estado es valido.

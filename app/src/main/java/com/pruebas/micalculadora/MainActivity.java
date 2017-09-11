@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Button boton = (Button)findViewById(v.getId()); // Busca en el layout el botón mediante v.getId()
         String id = boton.getText().toString(); // Recupera el texto y lo convierte en String
         switch (id) {
+            case "s" :
+                resultadoCalculadora = modeloCalculadora.sumatoria();
+                break;
             case "MCD":
                 resultadoCalculadora = modeloCalculadora.mcd();
                 break;
