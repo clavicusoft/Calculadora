@@ -128,8 +128,8 @@ public class ModeloCalculadora {
   }
 
   public Integer sumatoria() {
-      int f = 1;
-      for (int i = 0; i < z; i++)
+      int f = 0;
+      for (int i = 0; i <= z; i++)
           f = f+i;
       z=f;
       return new Integer(z);
