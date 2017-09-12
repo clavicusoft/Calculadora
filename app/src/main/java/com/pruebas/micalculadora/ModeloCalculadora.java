@@ -127,6 +127,12 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+    public Integer mcm () {
+        beta();
+        oprAltPrio = '$';
+        return new Integer(y);
+    }
+
     /**
      * 
      * @PRE El estado es valido.
@@ -180,6 +186,7 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
+  if ( oprAltPrio == '&' ) y = calculeMCM();
   z = 0;
  }
 
@@ -199,6 +206,27 @@ public class ModeloCalculadora {
     };
     return menor;
   }
+
+    private int calculeMCM() {
+        int menor = minYZ();
+        int mayor = maxYZ();
+        int a = minYZ();
+        int b = maxYZ();
+        int mcm;
+        int resto = mayor % menor;
+        while ( (!( resto == 0 )) && ( menor > 1) ) {
+            if ( ( mayor - menor ) > menor )
+                mayor = mayor - menor;
+            else {
+                int otro = mayor - menor; // Se basa en que el mcd(X,Y) = Y o a mcd(Y,X-Y).
+                mayor = menor;
+                menor = otro;
+            };
+            resto = mayor % menor;
+        };
+        mcm = ((a*b)/menor);
+        return mcm;
+    }
 
   private int minYZ(){
     if ( y < z )
