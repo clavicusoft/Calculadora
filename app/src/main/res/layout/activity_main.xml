@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pruebas.micalculadora.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="0"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:columnCount="4"
+        android:rowCount="5">
+
+        <Button
+            android:id="@+id/mcd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="MCD" />
+
+        <Button
+            android:id="@+id/factorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="N!" />
+
+        <Button
+            android:id="@+id/ce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="CE" />
+
+        <Button
+            android:id="@+id/c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/siete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/ocho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/nueve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/sumar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/cuatro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/cinco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/seis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/restar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/uno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/dos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/tres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/multiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/cero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/punto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="." />
+
+        <Button
+            android:id="@+id/igual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/dividir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="/" />
+    </GridLayout>
+</LinearLayout>
