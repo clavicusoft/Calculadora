@@ -99,9 +99,9 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
-    public Integer modulo() {
+    public Integer exponencial() {
         beta();
-        oprAltPrio = '%';
+        oprAltPrio = '^';
         return new Integer(y);
     }
 
@@ -186,7 +186,7 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
-     if (oprAltPrio == '%') y = y % z;
+     if (oprAltPrio == '^') y =(int)Math.pow(y, z);
   z = 0;
  }
 
