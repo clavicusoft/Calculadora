@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             case "%":
                 Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
                 break;
+            //Exponencial
             case "^":
                 resultadoCalculadora = modeloCalculadora.exponencial();
                 break;
