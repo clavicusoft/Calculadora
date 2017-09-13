@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 resultadoCalculadora = modeloCalculadora.factorial();
                 break;
             case "LOG":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                resultadoCalculadora = modeloCalculadora.logaritmo();
                 break;
             case "S":
                 Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();

@@ -211,5 +211,13 @@ public class ModeloCalculadora {
       return y;
       else return z;
   }
+
+  /*
+  *  Retorna el resultado de la función logaritmo en un número.
+  */
+  public Integer logaritmo () {
+      z = (int)Math.log(z);
+      return new Integer(z);
+  }
    
 }
