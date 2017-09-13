@@ -99,6 +99,9 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+  /*
+   Calculo del módulo
+  */
     public Integer modulo() {
         beta();
         oprAltPrio = '%';
