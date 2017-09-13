@@ -99,6 +99,12 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+    public Integer modulo() {
+        beta();
+        oprAltPrio = '%';
+        return new Integer(y);
+    }
+
     /**
      * 
      * @PRE El estado es valido.
@@ -180,6 +186,7 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
+     if (oprAltPrio == '%') y = y % z;
   z = 0;
  }
 

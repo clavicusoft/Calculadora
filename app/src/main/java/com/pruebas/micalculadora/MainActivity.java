@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
                 break;
             case "%":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                //Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                resultadoCalculadora = modeloCalculadora.modulo();
                 break;
             case "CE":
                 Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
