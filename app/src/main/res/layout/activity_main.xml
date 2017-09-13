@@ -3,171 +3,314 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#000"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.pruebas.micalculadora.MainActivity">
+    tools:context="com.pruebas.micalculadora.MainActivity"
+    android:weightSum="1">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="435dp"
+        android:layout_height="130dp"
         android:layout_gravity="center"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_weight="0.28">
 
         <TextView
             android:id="@+id/resultado"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_width="360dp"
+            android:textColor="#f0f0f0"
+            android:layout_height="match_parent"
             android:gravity="right"
             android:text="0"
             android:textSize="36sp" />
     </LinearLayout>
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:columnCount="4"
         android:rowCount="5">
 
         <Button
-            android:id="@+id/mcd"
-            android:layout_width="wrap_content"
+            android:id="@+id/mcm"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:textSize="20dp"
+            android:background="#262E3C"
+            android:onClick="botonClicado"
+            android:text="MCM"
+            android:textColor="#f0f0f0" />
+        <Button
+            android:id="@+id/raiz"
+            android:layout_margin="1dp"
+            android:textSize="20dp"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:textColor="#f0f0f0"
+            android:onClick="botonClicado"
+            android:text="SQRT" />
+        <Button
+            android:id="@+id/Log"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:textColor="#f0f0f0"
+            android:onClick="botonClicado"
+            android:text="LOG" />
+        <Button
+            android:id="@+id/sumatoria"
+            android:textSize="20dp"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:layout_margin="1dp"
+            android:textColor="#f0f0f0"
+            android:onClick="botonClicado"
+            android:text="S" />
+
+        <Button
+            android:id="@+id/mcd"
+            android:layout_width="105dp"
+            android:textSize="20dp"
+            android:layout_margin="1dp"
+            android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="MCD" />
 
         <Button
             android:id="@+id/factorial"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:textSize="20dp"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="N!" />
 
         <Button
             android:id="@+id/ce"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
+            android:textSize="20dp"
             android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="CE" />
 
         <Button
             android:id="@+id/c"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
+            android:layout_margin="1dp"
+            android:textSize="20dp"
             android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="C" />
 
         <Button
             android:id="@+id/siete"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:textSize="25dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="7" />
 
         <Button
             android:id="@+id/ocho"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:textSize="25dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="8" />
 
         <Button
             android:id="@+id/nueve"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textSize="25dp"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="9" />
 
         <Button
             android:id="@+id/sumar"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:textColor="#f0f0f0"
+            android:textSize="25dp"
             android:onClick="botonClicado"
             android:text="+" />
 
         <Button
             android:id="@+id/cuatro"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
+            android:textSize="25dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="4" />
 
         <Button
             android:id="@+id/cinco"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
+            android:textSize="25dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="5" />
 
         <Button
             android:id="@+id/seis"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textColor="#f0f0f0"
+            android:textSize="25dp"
             android:onClick="botonClicado"
             android:text="6" />
 
         <Button
             android:id="@+id/restar"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:textSize="25dp"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="-" />
 
         <Button
             android:id="@+id/uno"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textSize="25dp"
+            android:textColor="#f0f0f0"
             android:onClick="botonClicado"
             android:text="1" />
 
         <Button
             android:id="@+id/dos"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textColor="#f0f0f0"
+            android:layout_margin="1dp"
+            android:textSize="25dp"
             android:onClick="botonClicado"
             android:text="2" />
 
         <Button
             android:id="@+id/tres"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textColor="#f0f0f0"
+            android:textSize="25dp"
             android:onClick="botonClicado"
             android:text="3" />
 
         <Button
             android:id="@+id/multiplicar"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
+            android:layout_margin="1dp"
+            android:textSize="25dp"
             android:layout_height="wrap_content"
+            android:background="#262E3C"
             android:onClick="botonClicado"
-            android:text="*" />
+            android:text="*"
+            android:textColor="#f0f0f0" />
+
+
+        <Button
+            android:id="@+id/mod"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
+            android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textSize="25dp"
+            android:textColor="#f0f0f0"
+            android:onClick="botonClicado"
+            android:text="%" />
 
         <Button
             android:id="@+id/cero"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textColor="#f0f0f0"
+            android:textSize="25dp"
             android:onClick="botonClicado"
             android:text="0" />
 
         <Button
             android:id="@+id/punto"
-            android:layout_width="wrap_content"
+            android:layout_width="105dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#323A4E"
+            android:textColor="#f0f0f0"
+            android:textSize="25dp"
             android:onClick="botonClicado"
             android:text="." />
 
         <Button
-            android:id="@+id/igual"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="botonClicado"
-            android:text="=" />
-
-        <Button
             android:id="@+id/dividir"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
+            android:layout_margin="1dp"
             android:layout_height="wrap_content"
+            android:background="#262E3C"
+            android:textSize="25dp"
             android:onClick="botonClicado"
-            android:text="/" />
+            android:text="/"
+            android:textColor="#f0f0f0" />
+
     </GridLayout>
+
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/igual"
+        android:textSize="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="430dp"
+        android:layout_height="80dp"
+        android:background="#51B368"
+        android:textColor="#f0f0f0"
+        android:onClick="botonClicado"
+        android:text="=" />
+
 </LinearLayout>
