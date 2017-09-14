@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             case "CE":
                 // Mensaje de que indica función no implementada:
             case "LOG":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                resultadoCalculadora = modeloCalculadora.logaritmo();
                 break;
             case "S":
                 Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();

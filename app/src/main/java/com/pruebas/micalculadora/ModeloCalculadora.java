@@ -268,6 +268,14 @@ public class ModeloCalculadora {
       else return z;
   }
 
+  /*
+  *  Retorna el resultado de la función logaritmo en un número.
+  */
+  public Integer logaritmo () {
+      z = (int)Math.log(z);
+      return new Integer(z);
+  }
+
     public double calculeRaiz(double n, double x)
     {
         return calculeRaizRe(n, x, .0001);
