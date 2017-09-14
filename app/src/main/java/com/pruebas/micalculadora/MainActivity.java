@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
             case "N!":
                 resultadoCalculadora = modeloCalculadora.factorial();
                 break;
+            case "SQRT":
+                resultadoCalculadora = modeloCalculadora.raiz();
+                break;
+            case "CE":
+                // Mensaje de que indica función no implementada:
             case "LOG":
                 Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
                 break;
