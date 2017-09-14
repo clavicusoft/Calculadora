@@ -45,17 +45,9 @@ public class MainActivity extends AppCompatActivity {
             case "LOG":
                 resultadoCalculadora = modeloCalculadora.logaritmo();
                 break;
-            case "S":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
-                break;
-            case "MCM":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
-                break;
-            case "SQRT":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
-                break;
             case "%":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                //Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                resultadoCalculadora = modeloCalculadora.modulo();
                 break;
             //Exponencial
             case "^":
