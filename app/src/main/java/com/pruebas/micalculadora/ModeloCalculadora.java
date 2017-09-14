@@ -99,6 +99,21 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+  /*
+   Calculo del módulo
+  */
+    public Integer modulo() {
+        beta();
+        oprAltPrio = '%';
+        return new Integer(y);
+ }     
+
+ public Integer exponencial() {
+     beta();
+     oprAltPrio = '^';
+     return new Integer(y);
+ }
+
     /**
      * 
      * @PRE El estado es valido.
@@ -127,6 +142,13 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+  public Integer sumatoria() {
+      int f = 0;
+      for (int i = 0; i <= z; i++)
+          f = f+i;
+      z=f;
+      return new Integer(z);
+  }
     public Integer mcm () {
         beta();
         oprAltPrio = '$';
@@ -186,7 +208,9 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
+  if (oprAltPrio == '^') y =(int)Math.pow(y, z);
   if ( oprAltPrio == '$' ) y = calculeMCM();
+  if ( oprAltPrio == '%' ) y = y % z;
   z = 0;
  }
 
@@ -239,5 +263,19 @@ public class ModeloCalculadora {
       return y;
       else return z;
   }
-   
+
+  /*
+  *  Retorna el resultado de la función logaritmo en un número.
+  */
+  public Integer logaritmo () {
+      z = (int)Math.log(z);
+      return new Integer(z);
+  }
+
+    public Integer raiz()
+    {
+        z = (int)Math.sqrt(z);
+        return new Integer(z);
+    }
+
 }
