@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             case "MCD":
                 resultadoCalculadora = modeloCalculadora.mcd();
                 break;
-            case "mcm":
+            case "MCM":
                 resultadoCalculadora = modeloCalculadora.mcm();
                 break;
             case "N!":
