@@ -99,6 +99,13 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+  /*
+   Calculo del módulo
+  */
+    public Integer modulo() {
+      
+ }     
+      
     public Integer exponencial() {
         beta();
         oprAltPrio = '^';
