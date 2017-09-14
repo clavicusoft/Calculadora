@@ -99,6 +99,12 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+    public Integer exponencial() {
+        beta();
+        oprAltPrio = '^';
+        return new Integer(y);
+    }
+
     /**
      * 
      * @PRE El estado es valido.
@@ -186,6 +192,7 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
+  if (oprAltPrio == '^') y =(int)Math.pow(y, z);
   if ( oprAltPrio == '&' ) y = calculeMCM();
   z = 0;
  }
