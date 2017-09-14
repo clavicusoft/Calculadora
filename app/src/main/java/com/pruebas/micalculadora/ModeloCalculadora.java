@@ -186,7 +186,7 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
-  if ( oprAltPrio == '&' ) y = calculeMCM();
+  if ( oprAltPrio == '$' ) y = calculeMCM();
   z = 0;
  }
 
