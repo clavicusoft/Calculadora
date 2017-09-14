@@ -133,6 +133,13 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+  public Integer sumatoria() {
+      int f = 0;
+      for (int i = 0; i <= z; i++)
+          f = f+i;
+      z=f;
+      return new Integer(z);
+  }
     public Integer mcm () {
         beta();
         oprAltPrio = '$';
