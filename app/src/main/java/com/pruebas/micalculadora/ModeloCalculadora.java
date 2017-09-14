@@ -107,12 +107,12 @@ public class ModeloCalculadora {
         oprAltPrio = '%';
         return new Integer(y);
  }     
-      
-    public Integer exponencial() {
-        beta();
-        oprAltPrio = '^';
-        return new Integer(y);
-    }
+
+ public Integer exponencial() {
+     beta();
+     oprAltPrio = '^';
+     return new Integer(y);
+ }
 
     /**
      * 
@@ -152,19 +152,6 @@ public class ModeloCalculadora {
     public Integer mcm () {
         beta();
         oprAltPrio = '$';
-        return new Integer(y);
-    }
-
-    /**
-     *
-     * @PRE El estado es valido.
-     * @POS ( y = y oprAltPrio z ) Y ( oprAltPrio = r )
-     *      Asi acumula cualquier operador de alta prioridad en y, y deja todo listo para la proxima Raiz.
-     * @return y como Long para que sea desplegado por la Vista.
-     */
-    public Integer raiz () {
-        beta();
-        oprAltPrio = 'r';
         return new Integer(y);
     }
 
@@ -220,10 +207,9 @@ public class ModeloCalculadora {
  private void beta () {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
-  if ( oprAltPrio == 'r' ) y = (int)calculeRaiz(y,z);
   if ( oprAltPrio == '&' ) y = calculeMCD();
   if (oprAltPrio == '^') y =(int)Math.pow(y, z);
-  if ( oprAltPrio == '&' ) y = calculeMCM();
+  if ( oprAltPrio == '$' ) y = calculeMCM();
      if ( oprAltPrio == '%' ) y = y % z;
   z = 0;
  }
@@ -286,27 +272,10 @@ public class ModeloCalculadora {
       return new Integer(z);
   }
 
-    public double calculeRaiz(double n, double x)
+    public Integer raiz()
     {
-        return calculeRaizRe(n, x, .0001);
+        z = (int)Math.sqrt(z);
+        return new Integer(z);
     }
 
-    public double calculeRaizRe(double n, double x, double p)
-    {
-        if(x < 0)
-        {
-            return -1;
-        }
-        if(x == 0) {
-            return 0;
-        }
-        double x1 = x;
-        double x2 = x / n;
-        while (Math.abs(x1 - x2) > p)
-        {
-            x1 = x2;
-            x2 = ((n - 1.0) * x2 + x / Math.pow(x2, n - 1.0)) / n;
-        }
-        return x2;
-    }
 }

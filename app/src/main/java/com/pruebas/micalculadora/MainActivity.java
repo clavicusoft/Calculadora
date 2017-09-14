@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private ModeloCalculadora modeloCalculadora;
     private TextView resultadoTexto;
     private Integer resultadoCalculadora;
+
     /* Esto es una prueba para saber si git está vinculado*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +41,12 @@ public class MainActivity extends AppCompatActivity {
             case "SQRT":
                 resultadoCalculadora = modeloCalculadora.raiz();
                 break;
-            case "CE":
-                // Mensaje de que indica función no implementada:
             case "LOG":
                 resultadoCalculadora = modeloCalculadora.logaritmo();
                 break;
             case "%":
-                //Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
                 resultadoCalculadora = modeloCalculadora.modulo();
                 break;
-            //Exponencial
             case "^":
                 resultadoCalculadora = modeloCalculadora.exponencial();
                 break;
