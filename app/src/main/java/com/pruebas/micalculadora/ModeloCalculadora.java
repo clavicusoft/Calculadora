@@ -99,6 +99,12 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+    public Integer exponencial() {
+        beta();
+        oprAltPrio = '^';
+        return new Integer(y);
+    }
+
     /**
      * 
      * @PRE El estado es valido.
@@ -134,6 +140,25 @@ public class ModeloCalculadora {
       z=f;
       return new Integer(z);
   }
+    public Integer mcm () {
+        beta();
+        oprAltPrio = '$';
+        return new Integer(y);
+    }
+
+    /**
+     *
+     * @PRE El estado es valido.
+     * @POS ( y = y oprAltPrio z ) Y ( oprAltPrio = r )
+     *      Asi acumula cualquier operador de alta prioridad en y, y deja todo listo para la proxima Raiz.
+     * @return y como Long para que sea desplegado por la Vista.
+     */
+    public Integer raiz () {
+        beta();
+        oprAltPrio = 'r';
+        return new Integer(y);
+    }
+
     /**
      * 
      * @PRE El estado es valido.
@@ -186,7 +211,10 @@ public class ModeloCalculadora {
  private void beta () {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
+  if ( oprAltPrio == 'r' ) y = (int)calculeRaiz(y,z);
   if ( oprAltPrio == '&' ) y = calculeMCD();
+  if (oprAltPrio == '^') y =(int)Math.pow(y, z);
+  if ( oprAltPrio == '&' ) y = calculeMCM();
   z = 0;
  }
 
@@ -207,6 +235,27 @@ public class ModeloCalculadora {
     return menor;
   }
 
+    private int calculeMCM() {
+        int menor = minYZ();
+        int mayor = maxYZ();
+        int a = minYZ();
+        int b = maxYZ();
+        int mcm;
+        int resto = mayor % menor;
+        while ( (!( resto == 0 )) && ( menor > 1) ) {
+            if ( ( mayor - menor ) > menor )
+                mayor = mayor - menor;
+            else {
+                int otro = mayor - menor; // Se basa en que el mcd(X,Y) = Y o a mcd(Y,X-Y).
+                mayor = menor;
+                menor = otro;
+            };
+            resto = mayor % menor;
+        };
+        mcm = ((a*b)/menor);
+        return mcm;
+    }
+
   private int minYZ(){
     if ( y < z )
       return y;
@@ -218,5 +267,28 @@ public class ModeloCalculadora {
       return y;
       else return z;
   }
-   
+
+    public double calculeRaiz(double n, double x)
+    {
+        return calculeRaizRe(n, x, .0001);
+    }
+
+    public double calculeRaizRe(double n, double x, double p)
+    {
+        if(x < 0)
+        {
+            return -1;
+        }
+        if(x == 0) {
+            return 0;
+        }
+        double x1 = x;
+        double x2 = x / n;
+        while (Math.abs(x1 - x2) > p)
+        {
+            x1 = x2;
+            x2 = ((n - 1.0) * x2 + x / Math.pow(x2, n - 1.0)) / n;
+        }
+        return x2;
+    }
 }

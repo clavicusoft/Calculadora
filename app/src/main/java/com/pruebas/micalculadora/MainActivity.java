@@ -31,12 +31,35 @@ public class MainActivity extends AppCompatActivity {
             case "MCD":
                 resultadoCalculadora = modeloCalculadora.mcd();
                 break;
+            case "MCM":
+                resultadoCalculadora = modeloCalculadora.mcm();
+                break;
             case "N!":
                 resultadoCalculadora = modeloCalculadora.factorial();
                 break;
+            case "SQRT":
+                resultadoCalculadora = modeloCalculadora.raiz();
+                break;
             case "CE":
                 // Mensaje de que indica función no implementada:
+            case "LOG":
                 Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                break;
+            case "S":
+                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                break;
+            case "MCM":
+                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                break;
+            case "SQRT":
+                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                break;
+            case "%":
+                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                break;
+            //Exponencial
+            case "^":
+                resultadoCalculadora = modeloCalculadora.exponencial();
                 break;
             case "C":
                 modeloCalculadora.limpiarTodo();
