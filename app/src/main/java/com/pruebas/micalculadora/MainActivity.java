@@ -25,12 +25,23 @@ public class MainActivity extends AppCompatActivity {
         Button boton = (Button)findViewById(v.getId()); // Busca en el layout el botón mediante v.getId()
         String id = boton.getText().toString(); // Recupera el texto y lo convierte en String
         switch (id) {
+            case "S" :
+                resultadoCalculadora = modeloCalculadora.sumatoria();
+                break;
             case "MCD":
                 resultadoCalculadora = modeloCalculadora.mcd();
+                break;
+            case "MCM":
+                resultadoCalculadora = modeloCalculadora.mcm();
                 break;
             case "N!":
                 resultadoCalculadora = modeloCalculadora.factorial();
                 break;
+            case "SQRT":
+                resultadoCalculadora = modeloCalculadora.raiz();
+                break;
+            case "CE":
+                // Mensaje de que indica función no implementada:
             case "LOG":
                 resultadoCalculadora = modeloCalculadora.logaritmo();
                 break;
@@ -46,8 +57,9 @@ public class MainActivity extends AppCompatActivity {
             case "%":
                 Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
                 break;
-            case "CE":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+            //Exponencial
+            case "^":
+                resultadoCalculadora = modeloCalculadora.exponencial();
                 break;
             case "C":
                 modeloCalculadora.limpiarTodo();
