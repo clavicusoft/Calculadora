@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:background="#262E3C"
             android:textColor="#f0f0f0"
-            android:onClick=".MainActivity.botonClicado"
+            android:onClick="botonClicado"
             android:text="SQRT" />
         <Button
             android:id="@+id/Log"
@@ -108,7 +108,7 @@
             android:background="#262E3C"
             android:textColor="#f0f0f0"
             android:onClick="botonClicado"
-            android:text="CE" />
+            android:text="^" />
 
         <Button
             android:id="@+id/c"

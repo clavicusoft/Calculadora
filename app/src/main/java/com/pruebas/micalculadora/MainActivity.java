@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private ModeloCalculadora modeloCalculadora;
     private TextView resultadoTexto;
     private Integer resultadoCalculadora;
+
     /* Esto es una prueba para saber si git está vinculado*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,29 +26,29 @@ public class MainActivity extends AppCompatActivity {
         Button boton = (Button)findViewById(v.getId()); // Busca en el layout el botón mediante v.getId()
         String id = boton.getText().toString(); // Recupera el texto y lo convierte en String
         switch (id) {
+            case "S" :
+                resultadoCalculadora = modeloCalculadora.sumatoria();
+                break;
             case "MCD":
                 resultadoCalculadora = modeloCalculadora.mcd();
+                break;
+            case "MCM":
+                resultadoCalculadora = modeloCalculadora.mcm();
                 break;
             case "N!":
                 resultadoCalculadora = modeloCalculadora.factorial();
                 break;
-            case "LOG":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
-                break;
-            case "S":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
-                break;
-            case "MCM":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
-                break;
             case "SQRT":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                resultadoCalculadora = modeloCalculadora.raiz();
+                break;
+            case "LOG":
+                resultadoCalculadora = modeloCalculadora.logaritmo();
                 break;
             case "%":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+                resultadoCalculadora = modeloCalculadora.modulo();
                 break;
-            case "CE":
-                Toast.makeText(this,"Función no implementada",Toast.LENGTH_LONG).show();
+            case "^":
+                resultadoCalculadora = modeloCalculadora.exponencial();
                 break;
             case "C":
                 modeloCalculadora.limpiarTodo();
