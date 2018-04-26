@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern="holamunod" type="CLASS" />
       <mapping pattern="kjnb" type="CLASS" />
+      <mapping ext="bal" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
