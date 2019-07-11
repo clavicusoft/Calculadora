@@ -1,0 +1,11 @@
+<application>
+  <component name="GithubAccounts">
+    <account id="0113c69f-373e-4fcb-b6d0-0ac8603b2ac4" name="jorge.remon@ucr.ac.cr">
+      <server host="github.com" />
+    </account>
+  </component>
+  <component name="GithubSettings">
+    <option name="LOGIN" value="jorge.remon@ucr.ac.cr" />
+    <option name="AUTH_TYPE" value="BASIC" />
+  </component>
+</application>
